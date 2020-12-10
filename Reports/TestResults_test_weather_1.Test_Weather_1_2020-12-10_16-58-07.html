@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyObservatory Testing Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">MyObservatory Testing Report</h2>
+                <p class='attribute'><strong>Start Time: </strong>2020-12-10 16:58:07</p>
+                <p class='attribute'><strong>Duration: </strong>23.52 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 2, Pass: 0, Error: 2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_weather_1.Test_Weather_1</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_tomorrow_weather_001</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>setUp
+screenshot:C:\Users\dell\Desktop\MyObservatory_Automate\screenshot\weather_setup.jpg
+tearDown
+</p><p style="color:maroon;">UiObjectNotFoundError: -32002 Client error: <> data: Selector [resourceId='hko.MyObservatory_v1_0:id/text', text='9-Day Forecast'], method: None</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\MyObservatory_Automate\TestCases\test_weather_1.py", line 33, in test_tomorrow_weather_001
+    self.d(resourceId="hko.MyObservatory_v1_0:id/text", text="9-Day Forecast").click()
+  File "G:\Python\lib\site-packages\uiautomator2\_selector.py", line 150, in click
+    self.must_wait(timeout=timeout)
+  File "G:\Python\lib\site-packages\uiautomator2\_selector.py", line 345, in must_wait
+    raise UiObjectNotFoundError({'code': -32002, 'data': str(self.selector), 'method': 'wait'})
+uiautomator2.exceptions.UiObjectNotFoundError: -32002 Client error: <> data: Selector [resourceId='hko.MyObservatory_v1_0:id/text', text='9-Day Forecast'], method: None
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_tomorrow_weather_001</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>setUp
+screenshot:C:\Users\dell\Desktop\MyObservatory_Automate\screenshot\weather_setup.jpg
+tearDown
+</p><p style="color:maroon;">AttributeError: 'function' object has no attribute 'home'</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\MyObservatory_Automate\TestCases\test_weather_1.py", line 27, in tearDown
+    self.d.press.home()
+AttributeError: 'function' object has no attribute 'home'
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 0, Error: 2 -- Duration: 23.52 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

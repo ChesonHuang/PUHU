@@ -1,0 +1,33 @@
+
+Running tests... 
+----------------------------------------------------------------------
+ test_tomorrow_weather_001 (test_weather_1.Test_Weather_1) ... ERROR (23.522128)s
+
+======================================================================
+ERROR [0.000000s]: test_weather_1.Test_Weather_1.test_tomorrow_weather_001
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\MyObservatory_Automate\TestCases\test_weather_1.py", line 33, in test_tomorrow_weather_001
+    self.d(resourceId="hko.MyObservatory_v1_0:id/text", text="9-Day Forecast").click()
+  File "G:\Python\lib\site-packages\uiautomator2\_selector.py", line 150, in click
+    self.must_wait(timeout=timeout)
+  File "G:\Python\lib\site-packages\uiautomator2\_selector.py", line 345, in must_wait
+    raise UiObjectNotFoundError({'code': -32002, 'data': str(self.selector), 'method': 'wait'})
+uiautomator2.exceptions.UiObjectNotFoundError: -32002 Client error: <> data: Selector [resourceId='hko.MyObservatory_v1_0:id/text', text='9-Day Forecast'], method: None
+
+======================================================================
+ERROR [23.522128s]: test_weather_1.Test_Weather_1.test_tomorrow_weather_001
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\MyObservatory_Automate\TestCases\test_weather_1.py", line 27, in tearDown
+    self.d.press.home()
+AttributeError: 'function' object has no attribute 'home'
+
+----------------------------------------------------------------------
+Ran 1 test in 0:00:23
+
+FAILED
+ (Errors=2)
+
+Generating HTML reports... 
+reports\TestResults_test_weather_1.Test_Weather_1_2020-12-10_16-58-07.html
